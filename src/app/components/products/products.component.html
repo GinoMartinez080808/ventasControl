@@ -1,0 +1,41 @@
+<app-header></app-header>
+<section id="productos" class="container p-5">
+  <h1>Productos</h1>
+  <div class="row p-5">
+    @for (product of products; track product.id){
+      @if (product.cantidad > 0;){ 
+    <div  class="card col-md-4" >
+        <img [src]="product.imagen[0]" class="card-img-top" alt="Fissure in Sandstone"/>
+        <div class="card-body">
+          <h5 class="card-title">{{ product.nombre }}</h5>
+          <p class="card-text">{{ product.descripcion }}</p>
+          <p class="text-success">{{ product.precio }}$</p>
+          <button [id]="product.id" class="btn btn-primary" (click)="addToCart(product.id)">Seleccionar</button>
+        </div>
+      
+    </div>
+  }
+  } 
+  </div> 
+  <h1>Carrito</h1>
+  <div class="row p-5">
+    @for (carrito of compra; track carrito){
+      @if (carrito > 0;){
+    <div  class="card col-md-4" >
+        <img [src]="products[carrito].imagen[0]" class="card-img-top" alt="Fissure in Sandstone"/>
+        <div class="card-body">
+          <h5 class="card-title">{{ products[carrito].nombre }}</h5>
+          <p class="card-text">{{ products[carrito].descripcion }}</p>
+          <p class="text-success">{{ products[carrito].precio }}$</p>
+          <button [id]="products[carrito].id" class="btn btn-danger" (click)="deleteToCart(carrito)">Eliminar</button>
+        </div>
+      
+    </div>
+  }
+  } 
+  
+  </div> 
+
+
+      
+</section>

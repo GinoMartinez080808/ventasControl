@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <div class="row justify-content-center p-5">
+        <mat-card class="example-card p-4 border-5 rounded-7 border-primary" appearance="outlined">
+            <mat-card-header class="d-flex flex-column justify-content-center align-items-center">
+              <mat-card-title class="fs-2 text-light">{{user.name}}</mat-card-title>
+              <img mat-card-image [src]="user.image" alt="Photo Profile" class="rounded-circle border">
+              <p class="text-light">{{user.role}}</p>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+                Comission: {{user.comission}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-flat-button>LIKE</button>
+              <button mat-flat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+          
+    </div>
+</div>
