@@ -1,0 +1,18 @@
+{
+  "hosting": {
+    "public": "dist/ventas-control/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "*index.html"
+      }
+    ],
+    
+    "site": "ventascontrol-66465-bbaef"
+  }
+}
